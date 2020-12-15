@@ -19,13 +19,14 @@ class TestRegexAgenda(unittest.TestCase):
         for text, expected in cases:
             match = re.match(regexp_agenda, text)
             if expected:
+                self.assertTrue(match, f"\"{text}\" should match")
                 groups = match.groupdict()
                 self.assertEqual(
                     groups, expected,
                     f"\"{text}\" should match {expected}, but was {groups}"
                 )
             else:
-                self.assertFalse(match)
+                self.assertFalse(match, f"\"{text}\" should not match")
 
 
 if __name__ == '__main__':
