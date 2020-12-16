@@ -1,11 +1,10 @@
 import unittest
 from queens import generator_size
-from functools import reduce
 
 
 class TestQueensGeneratorSize(unittest.TestCase):
 
-    def test_size(self):
+    def test_queens_generator_size(self):
         self.assertEqual(0, generator_size([]))
         self.assertEqual(1337, generator_size(range(1337)))
 
