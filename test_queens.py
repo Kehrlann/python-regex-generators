@@ -25,7 +25,7 @@ class TestQueens(unittest.TestCase):
                     (2, 0, 3, 1)
                 )
             ),
-            set(queens(4))
+            set([tuple(x) for x in queens(4)])
         )
 
     def test_queens_many(self):
